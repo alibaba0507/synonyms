@@ -15,9 +15,13 @@ error_reporting(E_ALL);
   $myIndxFile = "th_en_US_new.idx";
   $lines = file($myIndxFile);//file in to an array
   $fdat = fopen('th_en_US_new.dat', 'r');
-  
-  $replace =($_GET['word'])?$_GET['word']: $_POST['word'];
- 
+  if (isset($_GET['word'])){$replace = $_GET['word'];}
+  else if (isset($_POST['word'])){$replace =$_POST['word'];}
+  else
+  {
+	 //echo json_encode(array());
+	 die();
+  }
   if (startsWith($replace,'"') || startsWith($replace,"'"))
 	  $replace = trim(substr($replace,1,-1));
    //echo "Current word is ".$replace;
