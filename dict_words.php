@@ -44,7 +44,7 @@ error_reporting(E_ALL);
   {
   if (isset($letters))
 			{
-				 $replace = $replace_arr[i];
+				 $replace = $replace_arr[$i];
 				 //echo "\nSearch for ...";
 				$searchIndex = strtoupper (substr($replace,0,1));	
 				$leter_index = "";
