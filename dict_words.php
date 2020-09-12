@@ -101,7 +101,7 @@ error_reporting(E_ALL);
 					//echo json_encode( array("word"=>$replace
 					//				,"result"=>$syn));
 					//echo $synonyms;
-	                if (isset($_POST['single']))
+				  if (isset($_POST['single']) || isset($_GET['single']))
                     {
 						 $arr_words = explode('|',$syn);
 						 $rnd = rand(0,count($arr_words) - 1);
