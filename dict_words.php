@@ -101,6 +101,16 @@ error_reporting(E_ALL);
 					//echo json_encode( array("word"=>$replace
 					//				,"result"=>$syn));
 					//echo $synonyms;
+	                if (isset($_POST['single']))
+                    {
+						 $arr_words = explode('|',$syn);
+						 $rnd = rand(0,count($arr_words) - 1);
+						 while (substr(trim($arr_words[$rnd]),0,1) == '(')
+						{
+							$rnd = rand(0,count($arr_words) - 1);
+						}// end while	
+                        $syn = $arr_words[$rnd];						
+					}						
 					 array_push($result ,array("word"=>$replace
 						         			,"result"=>$syn)); 
 				  }// end if (strlen($buffer) > 0)
