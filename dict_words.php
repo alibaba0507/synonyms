@@ -109,9 +109,11 @@ error_reporting(E_ALL);
 						{
 							$rnd = rand(0,count($arr_words) - 1);
 						}// end while	
-                        $syn = $arr_words[$rnd];						
-					}						
-					 array_push($result ,array("word"=>$replace
+                        $syn = $arr_words[$rnd];
+						array_push($result ,array("word"=>$replace
+						         			,"single"=>$syn)); 						
+					}else						
+						array_push($result ,array("word"=>$replace
 						         			,"result"=>$syn)); 
 				  }// end if (strlen($buffer) > 0)
 					
