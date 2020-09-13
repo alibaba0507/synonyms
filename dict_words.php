@@ -21,6 +21,9 @@ error_reporting(E_ALL);
   {
 	 //echo json_encode(array());
 	 echo "NO POST<br>";
+	 foreach (getallheaders() as $name => $value) {
+      echo "$name: $value\n";
+     }
 	 echo json_encode($_POST);
 	 die();
   }
