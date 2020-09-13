@@ -20,6 +20,7 @@ error_reporting(E_ALL);
   else
   {
 	 //echo json_encode(array());
+	 echo json_encode($_POST);
 	 die();
   }
   if (startsWith($replace,'"') || startsWith($replace,"'"))
