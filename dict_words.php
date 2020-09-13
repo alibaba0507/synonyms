@@ -20,6 +20,7 @@ error_reporting(E_ALL);
   else
   {
 	 //echo json_encode(array());
+	 echo "NO POST<br>";
 	 echo json_encode($_POST);
 	 die();
   }
