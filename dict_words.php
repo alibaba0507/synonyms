@@ -106,6 +106,7 @@ error_reporting(E_ALL);
 					//echo json_encode( array("word"=>$replace
 					//				,"result"=>$syn));
 					//echo $synonyms;
+					$obj = new stdClass();
 				  if (isset($_POST['single']) || isset($_GET['single']))
                     {
 						 $arr_words = explode('|',$syn);
@@ -119,8 +120,11 @@ error_reporting(E_ALL);
                         $syn = trim($arr_words[$rnd]);
 						$syn = str_replace('\n','',$syn);
 						$syn = str_replace('\\n','',$syn);
-						array_push($result ,array("word"=>$replace
-						         			,"result"=>$syn)); 						
+						
+						$obj->word = $replace;
+						$obj->result = $syn;
+						array_push($result ,/*array("word"=>$replace
+						         			,"result"=>$syn)*/$obj); 						
 					}else						
 						array_push($result ,array("word"=>$replace
 						         			,"result"=>$syn)); 
