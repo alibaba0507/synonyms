@@ -111,7 +111,8 @@ error_reporting(E_ALL);
 						 $arr_words = explode('|',$syn);
 						 $rnd = rand(0,count($arr_words) - 1);
 						 while (substr(trim($arr_words[$rnd]),0,1) == '('
-						    || strpos(trim($arr_words[$rnd])," ") !== false)
+						    || (strpos(trim($arr_words[$rnd])," ") !== false
+							    || strpos(trim($arr_words[$rnd]),"-") !== false))
 						{
 							$rnd = rand(0,count($arr_words) - 1);
 						}// end while	
