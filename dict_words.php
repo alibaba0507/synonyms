@@ -123,7 +123,7 @@ error_reporting(E_ALL);
 				} // end if ($leter_index != "" && strlen(trim($leter_index)) > 2)
 			}// end if (isset($letters))
        }//end for()
-		array_push($result,array("post":json_encode($_POST)));
+		array_push($result,array("post"=>json_encode($_POST)));
 		echo json_encode( $result);
          
   die();				
