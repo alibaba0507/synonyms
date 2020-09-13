@@ -114,7 +114,7 @@ error_reporting(E_ALL);
 						$syn = str_replace('\n','',$syn);
 						$syn = str_replace('\\n','',$syn);
 						array_push($result ,array("word"=>$replace
-						         			,"single"=>$syn)); 						
+						         			,"result"=>$syn)); 						
 					}else						
 						array_push($result ,array("word"=>$replace
 						         			,"result"=>$syn)); 
